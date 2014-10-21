@@ -1,5 +1,6 @@
 class WishesController < ApplicationController
   before_action :set_wish, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :require_login, only: [:index]
 
   # GET /wishes
   # GET /wishes.json
